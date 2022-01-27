@@ -12,8 +12,8 @@ jobs:
           python-version: 3.7
       - name: Install dependencies
         run: |
+          yum install -y https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-latest.amzn1.noarch.rpm
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          yum install -y https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-latest.amzn1.noarch.rpm
       - name: Run tests with pytest
         run: pytest 
