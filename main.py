@@ -7,7 +7,7 @@ rows = []
 
 
 def read_csv(filename):
-    with open(filename, 'r') as csv_file:
+    with open(filename, 'r', newline='') as csv_file:
         csv_reader = csv.reader(csv_file)
     
         fields = next(csv_reader)
@@ -23,13 +23,22 @@ def read_csv(filename):
 
 
     print('\nFirst 5 rows:\n')
-    for row in rows[:5]:
+
+    for col in rows[:5]:
+        print("%10s"%col),
+    print('\n')
+        
+        
+        
+        
+        
+
+#def test_csv_read():
     
-        for col in rows:
-            print("%10s"%col),
-        print('\n')
-        
-        
+
+
+
+
 def main():
     read_csv(filename)
     
