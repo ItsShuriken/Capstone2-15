@@ -1,4 +1,5 @@
 import csv
+import unittest
 
 filename = 'input.txt'
 
@@ -28,19 +29,19 @@ def read_csv(filename):
         print("%10s"%col),
     print('\n')
         
-        
-        
-        
-        
 
-#def test_csv_read():
+
+class TestCSV(unittest.TestCase):
     
-
-
-
+    def test_csv_read(self):
+        self.assertEqual('', '')
+        
+    
+    
 
 def main():
     read_csv(filename)
+    unittest.main()
     
     
 if __name__ == "__main__":
