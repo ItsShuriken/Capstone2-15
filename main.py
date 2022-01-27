@@ -17,24 +17,30 @@ def read_csv(filename):
            rows.append(row)
         
     
-        print("Total number of rows: %d"%(csv_reader.line_num))
+       # print("Total number of rows: %d"%(csv_reader.line_num))
     
 
-    print('Field names are:' + ', '.join(field for field in fields))
+    #print('Field names are:' + ', '.join(field for field in fields))
 
 
-    print('\nFirst 5 rows:\n')
+    #print('\nFirst 5 rows:\n')
 
-    for col in rows[:5]:
-        print("%10s"%col),
-    print('\n')
+   # for col in rows[:5]:
+   #     print("%10s"%col),
+  #  print('\n')
         
 
 
 class TestCSV(unittest.TestCase):
     
+    
     def test_csv_read(self):
-        self.assertEqual('', '')
+        
+        expected = [['A', 'A'], ['B', 'B'], ['C', 'C'], ['D', 'CH'], ['E', 'D'], ['F', 'E'], ['G', 'F'], ['H', 'G'], 
+        ['I', 'H'], ['J', 'I'], ['K', 'J'], ['L', 'K'], ['M', 'L'], ['N', 'LL'], ['O', 'M'], ['P', 'N'], ['Q', 'Ñ'], ['R', 'O'], 
+        ['S', 'P'], ['T', 'Q'], ['U', 'R'], ['V', 'S'], ['W', 'T'], ['X', 'U'], ['Y', 'V'], ['Z', 'W'], ['a', 'X'], ['b', 'Y'], ['c', 'Z'], 
+        ['d', 'a'], ['e', 'b'], ['f', 'c'],  ['g', 'ch'], ['h', 'd'], ['i', 'e'], ['j', 'f']]
+        self.assertEqual(expected, rows)
         
     
     
