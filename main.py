@@ -12,11 +12,8 @@ def read_csv(file):
         header = next(csv_reader)
         
         for row in csv_reader:
-            print (' '.join(row))
             rows.append(row)
             
-        for info in rows:
-            print("%s"%info)
     return rows
     
     
